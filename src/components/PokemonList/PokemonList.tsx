@@ -47,6 +47,9 @@ export function PokemonList({ search = "", limit = 100, page = 0, router }: { se
     };
   }, [data, search, paginationData])
 
+  useEffect(() => {
+    setPaginationData({ page, limit })
+  }, [limit, page])
 
   useEffect(() => {
     const controller = new AbortController()

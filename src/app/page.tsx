@@ -12,14 +12,14 @@ export default function Home() {
   const timerId = useRef<any>(null);
   const getSearchParams = useSearchParams();
   const [searchText, setSearchText] = useState(getSearchParams.get("search") || "");
-  const page = useMemo(() => Number(getSearchParams.get("page") || 0), [getSearchParams]);
-  const limit = useMemo(() => Number(getSearchParams.get("limit") || 100), [getSearchParams]);
+  const page = useMemo(() => Number(getSearchParams.get("page") || 0), [getSearchParams, searchText]);
+  const limit = useMemo(() => Number(getSearchParams.get("limit") || 100), [getSearchParams, searchText]);
 
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (timerId) clearTimeout(timerId.current);
     timerId.current = setTimeout(() => {
-      router.push(`?search=${e.target.value}`);
+      router.push(`?search=${e.target.value}&page=0`);
 
       setSearchText(e.target.value);
     }, 500);
