@@ -119,9 +119,9 @@ export default async function PokemonDetails(props: { params: { pokemonID: strin
 
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mt-5">
-
-        <div className="flex flex-col gap-4 p-2 rounded-xl" style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
+      <div className="grid grid-cols-2 gap-4 mt-5">
+      <div className="grid grid-rows-2 gap-3">
+      <div className="flex flex-col gap-4 p-2 rounded-xl" style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
           <div>
             <h2 className="flex justify-center text-lg underline text-orange-600">Types</h2>
           </div>
@@ -152,6 +152,8 @@ export default async function PokemonDetails(props: { params: { pokemonID: strin
           </div>
         </div>
 
+      </div>
+       
         <div className="flex flex-col gap-4 p-2 rounded-xl" style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
           <div>
             <h2 className="flex justify-center text-lg underline text-orange-600">Stats</h2>
