@@ -1,27 +1,27 @@
 # Pokémon Finder
 
-Pokémon Finder is a Next.js application built with TypeScript that allows users to search for Pokémon using the Pokédex API. It provides a seamless and fast user experience with optimized performance and SEO enhancements.
+Pokémon Finder is an interactive web application built with Next.js and TypeScript, enabling users to search for Pokémon effortlessly using the Pokédex API. The application ensures a smooth user experience with optimized performance and SEO-friendly pages.
 
 ## Live Demo
 
-You can try out the app here: [Pokémon Finder](https://statfinity-assignment.vercel.app/)
+Check out the app here: [Pokémon Finder](https://statfinity-assignment.vercel.app/)
 
 ## Features
 
-- **Fast Search UX**: The home page is built using client components to ensure a smooth and fast search experience.
-- **SEO Optimized Detail Pages**: Each Pokémon's detail page is a client component but leverages a server component for better SEO.
-- **Next.js & TypeScript**: Built with Next.js 13+ and TypeScript for type safety and improved performance.
+- **Fast and Responsive Search**: The homepage is designed with client components to provide quick search results without unnecessary delays.
+- **SEO-Optimized Detail Pages**: Pokémon detail pages use a combination of client and server components to enhance search engine visibility.
+- **Modern Web Technologies**: Developed using Next.js 13+ and TypeScript for better maintainability and performance.
 
-## Technologies Used
+## Tech Stack
 
-- **Next.js 13+** (App Router)
+- **Next.js 13+** (App Router-based architecture)
 - **TypeScript**
 - **Pokédex API**
 - **Tailwind CSS** (if applicable)
 
-## Installation & Setup
+## Getting Started
 
-To run this project locally, follow these steps:
+Follow these steps to set up the project locally:
 
 ### 1. Clone the Repository
 ```sh
@@ -36,23 +36,24 @@ npm install
 yarn install
 ```
 
-### 3. Start the Development Server
+### 3. Run the Development Server
 ```sh
 npm run dev
 # or
 yarn dev
 ```
 
-The application will be available at `http://localhost:3000/`.
+The application will be accessible at `http://localhost:3000/`.
 
-## API Usage
+## API Integration
 
-This project utilizes the [Pokédex API](https://pokeapi.co/) to fetch Pokémon data dynamically.
+This application fetches real-time Pokémon data from the [Pokédex API](https://pokeapi.co/).
 
-## Contributing
+## Contribution
 
-Feel free to open issues or submit pull requests if you have improvements or bug fixes.
+Contributions are welcome! Feel free to report issues or submit pull requests for improvements.
 
 ## License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the MIT License.
+
