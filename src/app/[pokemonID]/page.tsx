@@ -120,40 +120,40 @@ export default async function PokemonDetails(props: { params: { pokemonID: strin
       </div>
 
       <div className="grid grid-cols-2 gap-4 mt-5">
-      <div className="grid grid-rows-2 gap-3">
-      <div className="flex flex-col gap-4 p-2 rounded-xl" style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
-          <div>
-            <h2 className="flex justify-center text-lg underline text-orange-600">Types</h2>
+        <div className="grid grid-rows-2 gap-3">
+          <div className="flex flex-col gap-4 p-2 rounded-xl" style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
+            <div>
+              <h2 className="flex justify-center text-lg underline text-orange-600">Types</h2>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+              {
+                pokemon.types.map((type, index) => (
+                  <div key={index} className="p-2 bg-orange-100 border-orange-600 border rounded-xl">
+                    <p>{toPascalCase(type.type.name)}</p>
+                  </div>
+                ))
+              }
+            </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
-            {
-              pokemon.types.map((type, index) => (
-                <div key={index} className="p-2 bg-orange-100 border-orange-600 border rounded-xl">
-                  <p>{toPascalCase(type.type.name)}</p>
-                </div>
-              ))
-            }
+          <div className="flex flex-col gap-4 p-2 rounded-xl" style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
+            <div>
+              <h2 className="flex justify-center text-lg underline text-orange-600">Abilities</h2>
+            </div>
+            <div className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+              {
+                pokemon.abilities.map((ability, index) => (
+                  <div key={index} className="p-2 bg-orange-100 border-orange-600 border rounded-xl">
+                    <p>{toPascalCase(ability.ability.name)}</p>
+                  </div>
+                ))
+              }
+            </div>
           </div>
+
         </div>
 
-        <div className="flex flex-col gap-4 p-2 rounded-xl" style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
-          <div>
-            <h2 className="flex justify-center text-lg underline text-orange-600">Abilities</h2>
-          </div>
-          <div className="grid grid-cols-3 gap-4">
-            {
-              pokemon.abilities.map((ability, index) => (
-                <div key={index} className="p-2 bg-orange-100 border-orange-600 border rounded-xl">
-                  <p>{toPascalCase(ability.ability.name)}</p>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-
-      </div>
-       
         <div className="flex flex-col gap-4 p-2 rounded-xl" style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}>
           <div>
             <h2 className="flex justify-center text-lg underline text-orange-600">Stats</h2>
@@ -174,7 +174,7 @@ export default async function PokemonDetails(props: { params: { pokemonID: strin
           <div>
             <h2 className="flex justify-center text-lg underline text-orange-600 ">Moves</h2>
           </div>
-          <div className="grid grid-cols-8 gap-4">
+          <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {
               pokemon.moves.map((move, index) => (
                 <div key={index} className="p-2 bg-orange-100 border-orange-600 border rounded-xl">
