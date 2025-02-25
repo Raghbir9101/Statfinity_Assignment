@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "PokeDex",
@@ -16,8 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body
       >
-        <NextTopLoader />
-        {children}
+        <Suspense>
+          <NextTopLoader />
+          {children}
+        </Suspense>
       </body>
     </html>
   );

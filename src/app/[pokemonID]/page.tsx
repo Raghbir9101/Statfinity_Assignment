@@ -83,7 +83,7 @@ const getPokemon = async (pokemonID: string): Promise<PokemonDetails> => {
   }
 }
 
-export default async function PokemonDetails(props: { params: { pokemonID: string } }) {
+export default async function PokemonDetails(props:any) {
   const pokemonID = (await props.params).pokemonID;
   const pokemon: PokemonDetails = await getPokemon(pokemonID);
   console.log(pokemon.stats);
