@@ -12,7 +12,7 @@ export default function Home() {
   const timerId = useRef<any>(null);
   const getSearchParams = useSearchParams();
   const [searchText, setSearchText] = useState(getSearchParams.get("search") || "");
-  const page = useMemo(() => Number(getSearchParams.get("page") || 1), [getSearchParams]);
+  const page = useMemo(() => Number(getSearchParams.get("page") || 0), [getSearchParams]);
   const limit = useMemo(() => Number(getSearchParams.get("limit") || 100), [getSearchParams]);
 
 
@@ -20,6 +20,7 @@ export default function Home() {
     if (timerId) clearTimeout(timerId.current);
     timerId.current = setTimeout(() => {
       router.push(`?search=${e.target.value}`);
+
       setSearchText(e.target.value);
     }, 500);
   }
